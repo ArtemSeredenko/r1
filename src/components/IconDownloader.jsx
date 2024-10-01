@@ -80,8 +80,6 @@ const IconDownloader = () => {
 
   const handleLoadIcon = () => {
     setError(null);
-
-    // Используем регулярное выражение для извлечения имени иконки и библиотеки
     const match = importString.match(
       /import\s+\{\s*(\w+)\s*\}\s+from\s+['"]react-icons\/(\w+)['"]/
     );
@@ -89,11 +87,9 @@ const IconDownloader = () => {
     if (match) {
       const [, icon, lib] = match;
 
-      // Проверяем, есть ли такая библиотека
       if (iconLibraries[lib]) {
         const iconSet = iconLibraries[lib];
 
-        // Проверяем, существует ли иконка в наборе
         if (iconSet[icon]) {
           setIconComponent(() => iconSet[icon]);
         } else {
@@ -107,29 +103,20 @@ const IconDownloader = () => {
     }
   };
 
-  // Функция для преобразования компонента иконки в SVG строку
   const getSvgContent = () => {
     if (!IconComponent) return null;
 
-    // Создаем новый SVG элемент
-    const svgElement = document.createElementNS(
-      'http://www.w3.org/2000/svg',
-      'svg'
+    // Создаем экземпляр иконки
+    const iconInstance = <IconComponent size={64} />;
+
+    // Получаем SVG как строку
+    const svgString = new XMLSerializer().serializeToString(iconInstance);
+
+    // Добавляем атрибуты xmlns для корректного SVG
+    return svgString.replace(
+      /<svg /,
+      '<svg xmlns="http://www.w3.org/2000/svg" '
     );
-    svgElement.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-    svgElement.setAttribute('width', '64');
-    svgElement.setAttribute('height', '64');
-    svgElement.setAttribute('viewBox', '0 0 24 24');
-
-    // Вставляем контент иконки
-    const iconInstance = IconComponent({ size: 64 });
-    svgElement.innerHTML = iconInstance.props.children
-      .map((child) => {
-        return child.type === 'path' ? `<path d="${child.props.d}" />` : '';
-      })
-      .join('');
-
-    return svgElement.outerHTML;
   };
 
   const handleDownload = () => {
