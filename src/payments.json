@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "cardNumber": "1234 5678 9012 3456",
+    "cardType": "Visa",
+    "cardOwner": "John Doe",
+    "date": "2024-01-01",
+    "amount": 100,
+    "description": "Payment for groceries",
+    "isPaid": true
+  },
+  {
+    "id": "2",
+    "cardNumber": "5678 1234 5678 9012",
+    "cardType": "MasterCard",
+    "cardOwner": "Jane Smith",
+    "date": "2024-02-15",
+    "amount": 250,
+    "description": "Online purchase",
+    "isPaid": false
+  },
+  {
+    "id": "3",
+    "cardNumber": "9012 3456 1234 5678",
+    "cardType": "Amex",
+    "cardOwner": "Alice Johnson",
+    "date": "2024-03-10",
+    "amount": 75,
+    "description": "Restaurant bill",
+    "isPaid": true
+  },
+  {
+    "id": "4",
+    "cardNumber": "3456 7890 1234 5678",
+    "cardType": "Visa",
+    "cardOwner": "Bob Brown",
+    "date": "2024-04-05",
+    "amount": 300,
+    "description": "Gas station",
+    "isPaid": false
+  },
+  {
+    "id": "5",
+    "cardNumber": "7890 1234 5678 9012",
+    "cardType": "Discover",
+    "cardOwner": "Charlie Davis",
+    "date": "2024-05-20",
+    "amount": 500,
+    "description": "Hotel booking",
+    "isPaid": true
+  },
+  {
+    "id": "6",
+    "cardNumber": "2345 6789 0123 4567",
+    "cardType": "Visa",
+    "cardOwner": "David Wilson",
+    "date": "2024-06-18",
+    "amount": 120,
+    "description": "Gym membership",
+    "isPaid": false
+  },
+  {
+    "id": "7",
+    "cardNumber": "6789 0123 4567 8901",
+    "cardType": "MasterCard",
+    "cardOwner": "Emma Thomas",
+    "date": "2024-07-22",
+    "amount": 90,
+    "description": "Movie tickets",
+    "isPaid": true
+  },
+  {
+    "id": "8",
+    "cardNumber": "0123 4567 8901 2345",
+    "cardType": "Amex",
+    "cardOwner": "Frank Miller",
+    "date": "2024-08-30",
+    "amount": 60,
+    "description": "Coffee shop",
+    "isPaid": false
+  },
+  {
+    "id": "9",
+    "cardNumber": "4567 8901 2345 6789",
+    "cardType": "Visa",
+    "cardOwner": "Grace Lee",
+    "date": "2024-09-12",
+    "amount": 200,
+    "description": "Gift shopping",
+    "isPaid": true
+  },
+  {
+    "id": "10",
+    "cardNumber": "8901 2345 6789 0123",
+    "cardType": "MasterCard",
+    "cardOwner": "Henry Clark",
+    "date": "2024-10-08",
+    "amount": 350,
+    "description": "Flight booking",
+    "isPaid": false
+  }
+]
