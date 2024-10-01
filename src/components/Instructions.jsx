@@ -27,7 +27,7 @@ const Instructions = () => {
         </li>
         <li>
           Для второго поля ввода введите название иконки без скобочек. Например,
-          для <code>BiAbacus</code> просто введите:
+          для <code>DiApple</code> просто введите:
           <pre>
             <code>{`DiApple`}</code>
           </pre>
